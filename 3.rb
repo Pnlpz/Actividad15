@@ -4,8 +4,21 @@
 # este caso el método debe contar únicamente las apariciones de ese string en el
 # archivo
 
+def palabras()
+  data = ''
+  File.open('peliculas.txt', 'r') { |file| data = file.read }
+  lines = data.split(" ")
+  puts lines.count
+end
 
-data = ''
-File.open('peliculas.txt', 'r') { |file| data = file.read }
-lines = data.split("\n")
-puts lines.count
+palabras
+
+def contar('')
+  a = gets.chomp
+  data = ''
+  File.open('peliculas.txt', 'r') { |file| data = file.read }
+  lines = data.split(" ")
+  a = lines.include?
+end
+
+contar ('')
